@@ -10,15 +10,14 @@ import javax.persistence.*;
 @Getter
 @Setter
 @Entity
-@Data
-@Table(name = "Employee_Table")
+@Table(name = "employee")
 public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @ApiModelProperty(value = "Employee Id")
     private Long empId;
     @ApiModelProperty(value = "Employee Name")
-    private String Name;
+    private String name;
     @ApiModelProperty(value = "Employee Department")
     private String department;
     @ApiModelProperty(value = "Employee Grade")

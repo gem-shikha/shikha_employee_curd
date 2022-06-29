@@ -36,6 +36,7 @@ public class CurdApplicationTests {
 	Employee create = repository.save(e);
 	assertNotNull(create);
 	assertThat(e);
+	assertThat(repository.getById(9l));
     }
 
 	@Test
@@ -74,9 +75,9 @@ public class CurdApplicationTests {
 
 	@Test
 	@Order(6)
-	public void testDelete(){
+	public void testDelete() {
 		repository.deleteById(21L);
-	    assertThat(repository.existsById(15L)).isFalse();
+		assertThat(repository.existsById(15L)).isFalse();
 	}
 
 }
